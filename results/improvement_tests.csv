@@ -1,0 +1,11 @@
+change,trades_2005_2016,avg_R_2005_2016,trades_2017_2026,avg_R_2017_2026
+Final rules (kept),281,0.11,274,0.314
+Rejection setup only,242,0.313,271,0.116
+Rejection only + breakeven at 2R,230,0.386,258,0.062
+Rejection only + no breakeven,219,0.453,252,0.052
+Rejection only + next target out,250,0.228,282,0.045
+Rejection only + 5-day pause after a stop,194,0.204,219,0.096
+No breakeven + 50-day trend filter,116,0.62,146,-0.012
+No breakeven + skip high volatility,178,0.464,213,0.094
+No breakeven + wick at least half,122,0.47,141,0.151
+No breakeven + trend + skip high volatility,97,0.631,119,0.096

@@ -1,0 +1,8 @@
+# Price data stays local (download it yourself with src/oanda_download.py)
+data/
+*.parquet
+# Secrets
+.env
+*.token
+__pycache__/
+.DS_Store

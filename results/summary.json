@@ -1,0 +1,42 @@
+{
+ "all": {
+  "trades": 555,
+  "trades_per_month": 2.2,
+  "win_rate": 19.1,
+  "be_rate": 32.1,
+  "avg_R": 0.211,
+  "total_return_pct": 75.5,
+  "cagr_pct": 2.67,
+  "avg_month_pct": 0.23,
+  "pct_months_positive": 40.5,
+  "worst_month_pct": -2.49,
+  "best_month_pct": 5.14,
+  "max_dd_pct": -9.19,
+  "sharpe": 0.6
+ },
+ "2005_2014": {
+  "trades": 242,
+  "avg_R": 0.123,
+  "hit_target_pct": 16.9
+ },
+ "2015_Mar2022": {
+  "trades": 181,
+  "avg_R": 0.335,
+  "hit_target_pct": 21.5
+ },
+ "Mar2022_Oct2026": {
+  "trades": 132,
+  "avg_R": 0.201,
+  "hit_target_pct": 19.7
+ },
+ "by_setup": {
+  "bounce": {
+   "trades": 281,
+   "avg_R": 0.361
+  },
+  "break": {
+   "trades": 274,
+   "avg_R": 0.057
+  }
+ }
+}
