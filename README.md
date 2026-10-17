@@ -4,6 +4,40 @@ A rules-based, fully reproducible version of my discretionary GBPJPY trading sty
 
 **Result:** +0.21R per trade over 555 trades (Jan 2005 – Oct 2026). At a fixed 0.5% risk per trade, that is about **+2.7% a year with a 9.2% maximum drawdown**, profitable in 16 of 22 years. The edge is modest and comes mainly from one setup, the daily rejection of a well-tested support or resistance zone (+0.36R per trade). The next stage is a 2–3 month automated forward test on a demo account, with the rules unchanged.
 
+## Motivation
+
+I have traded for over nine years, personally and as a funded trader at AudaCity Capital, mostly GBPJPY, buying at support and selling at resistance in the direction of the trend. This project asks whether that judgment can be reduced to precise rules and tested like a quant would test it.
+
+The inspiration is Jim Simons and Renaissance Technologies: trading decided by data and mathematics rather than intuition, many small edges rather than one big bet, and strict testing to avoid fooling yourself with a lucky backtest. This repository is the first stage of that larger goal, a fully automated, multi-market, machine-learning trading system.
+
+## Project status
+
+This is **Phase 1 of a larger project, open for collaboration**.
+
+**Done**
+- [x] Research on systematic strategies (trend, carry, mean reversion) and a written project blueprint
+- [x] My discretionary GBPJPY style coded as exact rules (zones, rejection and break-and-retest setups, 15-minute triggers)
+- [x] Risk engine: fixed 0.5% risk per trade, open-risk cap, daily/weekly/monthly loss limits
+- [x] 21-year backtest on real OANDA 15-minute data with costs: +0.21R per trade, 555 trades
+- [x] Out-of-sample testing of 10 rule changes; all rejected as overfitting
+- [x] Machine-learning filter (logistic regression) tested; rejected for now, too few trades to learn from
+
+**Still to do**
+- [ ] **Automated demo trading:** a bot that scans daily zones, watches 15-minute triggers and places orders with broker-side stops on an OANDA practice account
+- [ ] **Forward test:** run the unchanged rules live on demo for 2–3 months and compare with the backtest
+- [ ] **News filter:** add a historical economic calendar and test closing trades before high-impact releases
+- [ ] **More markets:** test the same rules on EURJPY, GBPUSD, AUDJPY, gold and index futures; keep only markets where the edge holds
+- [ ] **Machine learning:** once more markets give enough trades, retry ML for trade selection with walk-forward validation and deflated Sharpe ratios
+- [ ] **Monitoring:** a dashboard comparing live results with the backtest
+
+## How to collaborate
+
+I am looking for collaborators in quantitative finance, data science, software engineering and trading to help finish the remaining stages.
+
+- Pick an item from **Still to do**, open a GitHub issue describing your approach, then send a pull request.
+- Keep the testing standard: rules fixed before testing, out-of-sample checks, costs included, no look-ahead.
+- To discuss the project, contact me on [LinkedIn](https://www.linkedin.com/in/solomonmwangi/).
+
 ![Account equity](docs/equity_curve.png)
 
 ![Result by year](docs/results_by_year.png)
